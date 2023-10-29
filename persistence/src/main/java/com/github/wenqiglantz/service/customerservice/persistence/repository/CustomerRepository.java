@@ -15,6 +15,8 @@ public interface CustomerRepository extends JpaRepository<Customer, String> {
     @Override
     Optional<Customer> findById(String s);
 
+    List<Customer> findByFirstName(String firstName);
+
 
 
     List<Customer> findByFirstNameAndLastName(String firstName, String lastName);
